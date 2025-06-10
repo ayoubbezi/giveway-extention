@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "CS2 Giveaway Extension",
+  "version": "2.0",
+  "description": "Save your Steam trade link and enter giveaways from Pixez's videos!",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "tabs", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://steamcommunity.com/my/tradeoffers/privacy*"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["https://www.youtube.com/watch*", "https://m.youtube.com/watch*"],
+      "js": ["youtube.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://firestore.googleapis.com https://*.googleapis.com https://*.firebaseapp.com"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injector.js"],
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #1b2838;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #66c0f4;
+    border-bottom: 1px solid #2a475e;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section h2 {
+    color: #c7d5e0;
+    border-bottom: none;
+    text-align: left;
+}
+
+#tradeLinkListContainer p {
+    background-color: #2a475e;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#tradeLinkList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#tradeLinkList li {
+    background-color: #2a475e;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}

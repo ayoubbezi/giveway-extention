@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CS2 Giveaway</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-link active" data-tab="home">Home</button>
+    <button class="tab-link" data-tab="history">History</button>
+  </div>
+
+  <div id="home" class="tab-content active">
+    <h2>🎁 CS2 Giveaway</h2>
+    <div class="xp-container">
+      <div class="level-text">Level 1</div>
+      <div class="xp-bar-container">
+        <div class="xp-bar"></div>
+      </div>
+      <div class="xp-text">0 / 100 XP</div>
+    </div>
+    <label for="tradeLink">Your Steam Trade Link:</label>
+    <input type="text" id="tradeLink" placeholder="https://steamcommunity.com/tradeoffer/new/?partner=..." />
+    <div class="button-group">
+        <button id="saveBtn">Save Manually</button>
+        <button id="findLinkBtn">Auto-Find Link</button>
+    </div>
+    <p id="status"></p>
+  </div>
+
+  <div id="history" class="tab-content">
+    <h2>Giveaway History</h2>
+    <ul id="historyList"></ul>
+    <button id="addTestEntryBtn">Add Test Entry</button> 
+  </div>
+
+  <script src="popup.js"></script>
+  <footer>
+    <a href="dashboard.html" target="_blank" id="dashboardLink">Admin Dashboard</a>
+  </footer>
+</body>
+</html>
